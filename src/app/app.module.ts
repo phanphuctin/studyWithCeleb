@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TimerComponent } from './timer/timer.component';
 import { PomodoroComponent } from './pomodoro/pomodoro.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TimerComponent,
-    PomodoroComponent
+    PomodoroComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

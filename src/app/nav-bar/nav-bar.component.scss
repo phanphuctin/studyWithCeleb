@@ -1,0 +1,61 @@
+.check:checked ~ .container {
+  transform: translateX(-100%);
+  transition: transform 0.5s linear ;
+}
+.check:checked, .icon{
+  transform: rotateY(180deg);
+}
+.check {
+  display: none;
+}
+.container {
+  position: fixed;
+  padding: 0;
+  top: 111px;
+  left: 0;
+  z-index: 1;
+  background-color: #605856;
+  color: white;
+  width: 300px;
+  height: calc(100% - 100px);
+  transform: translateX(0);
+  transition: transform 0.5s linear ;
+  ul {
+    padding: 50px 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    li {
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      border-bottom: 1px solid rgb(75, 69, 67) ;
+      &:hover {
+        background-color:rgb(75, 69, 67) ;
+      }
+    }
+  }
+  .icon-container {
+    left: 300px;
+    position: absolute;
+    top: 45%;
+    background: rgb(75, 69, 67);
+    padding: 20px 5px;
+    border-radius: 0 5px 5px 0;
+    transform: rotateY(0deg);
+    cursor: pointer;
+   
+    &:hover {
+      opacity: 0.7  ;
+    }
+  }
+ 
+}
+@keyframes hideNavBar{
+  from {
+    left: 0px;
+  }
+  to {
+    left: -300px;
+  }
+}

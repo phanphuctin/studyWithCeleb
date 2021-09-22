@@ -1,0 +1,12 @@
+<input class="check" type="checkbox" id="checkbox-navbar">
+<div class="container">
+  <ul>
+    <li>BerryGood Cafe</li>
+    <li>Johyun</li>
+    <li>Sehyung</li>
+  </ul>
+  <label class="icon-container" for="checkbox-navbar" (click)="changeNavBar()">
+    <i *ngIf="changeArrow" class="fa fa-chevron-left"></i>
+    <i *ngIf="!changeArrow" class="fa fa-chevron-right" aria-hidden="true"></i>
+  </label>
+</div>
