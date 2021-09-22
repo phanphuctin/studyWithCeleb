@@ -1,0 +1,36 @@
+.pomodoro {
+  position: fixed;
+  width: 300px;
+  z-index: 10;
+  .controls {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 300px;
+    margin: 0;
+    .button-pomo {
+      display: flex;
+      flex: 1;
+      border: none;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+      align-items: center;
+      justify-content: center;
+      &:focus {
+        background-color: gray;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+      }
+    }
+  }
+}
+.videoBG {
+  overflow-y: hidden;
+  overflow: hidden;
+}
+.counter {
+  font-weight: bold;
+  
+}

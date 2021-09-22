@@ -1,0 +1,33 @@
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: 'Orbitron', sans-serif;
+
+}
+.container {
+  // width: 25%;
+  padding: 0 20px;
+  width: 300px;
+  margin: 0;
+  align-items: center;
+  border: 1px solid black;
+  display: flex;
+  background: linear-gradient(90deg, #908b8b, #ceeaf7);
+}
+
+.controls {
+  display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.btn-custom {
+  padding: 0 20px;
+  margin: 2px 0;
+  border: none;
+  border-radius: 2px;
+  &:focus {
+    outline: none;
+  }
+}
