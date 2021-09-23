@@ -26,6 +26,37 @@
     }
   }
 }
+.loading {
+  position: fixed;
+  z-index: 1;
+  img {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    right: 50%;
+    border-radius: 50%;
+    height: 200px;
+  }
+}
+.audioBG {
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  button {
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}
 .videoBG {
   overflow-y: hidden;
   overflow: hidden;

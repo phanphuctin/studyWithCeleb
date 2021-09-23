@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, Input, EventEmitter, Output, ElementRef, SimpleChanges } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Observable, Subscription, interval } from 'rxjs';
-
+import { MusicList } from '../constant/musicList.constant';
 
 @Component({
   selector: 'app-pomodoro',
@@ -13,12 +13,25 @@ export class PomodoroComponent implements OnInit {
   message: string;
   pomodoroCount = 0;
   videoUrl = "../../assets/video/berrygood-cafe.mp4"
+  waiting = false;
+  musicUrl = '../../assets/audio/audio1.mp3';
+  i = 0;
   
   constructor(private modalService: NgbModal,
     private elRef: ElementRef) { }
 
   ngOnInit(): void {
   }
+
+  changeMusic() {
+    this.i += 1;
+    if(this.i > 3) {
+      this.i = 0;
+    }
+    this.musicUrl = MusicList[this.i].url
+    console.log(MusicList[this.i].url)
+  }
+
   /* Quan trong. chon video de load lai player neu khong se khong doi dc video*/ 
   changeBackGround(link) {
     this.videoUrl = link;

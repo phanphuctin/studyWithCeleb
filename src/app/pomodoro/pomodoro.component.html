@@ -18,6 +18,20 @@
 <app-nav-bar
   (changeBG)="changeBackGround($event)"
 ></app-nav-bar>
+<div *ngIf="waiting" class="loading">
+  <img src="../../assets/photo/berrygood-logo.png" alt="">
+</div>
+
+<div class="audioBG">
+  
+  <button (click)="changeMusic()" >Next</button>
+  <audio
+     controls
+     autoplay
+     loop
+    src="{{musicUrl}}">
+  </audio>
+</div>
 
 <div class="videoBG">
   <video width="100%" height="100%" [muted]="'muted'" autoplay loop>
