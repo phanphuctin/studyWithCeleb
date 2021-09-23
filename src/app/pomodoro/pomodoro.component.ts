@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, EventEmitter, Output, ElementRef, SimpleChanges } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Observable, Subscription, interval } from 'rxjs';
 
@@ -12,10 +12,21 @@ export class PomodoroComponent implements OnInit {
   mode = 'pomodoro';
   message: string;
   pomodoroCount = 0;
-  constructor(private modalService: NgbModal) { }
+  videoUrl = "../../assets/video/berrygood-cafe.mp4"
+  
+  constructor(private modalService: NgbModal,
+    private elRef: ElementRef) { }
 
   ngOnInit(): void {
   }
+  /* Quan trong. chon video de load lai player neu khong se khong doi dc video*/ 
+  changeBackGround(link) {
+    this.videoUrl = link;
+    console.log(link)
+    const player = this.elRef.nativeElement.querySelector('video');
+    player.load();
+ } 
+
   switchToPomodoro(): void {
     this.mode = 'pomodoro';
   }

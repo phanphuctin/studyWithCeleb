@@ -1,9 +1,13 @@
 <input class="check" type="checkbox" id="checkbox-navbar">
 <div class="container">
   <ul>
-    <li>BerryGood Cafe</li>
-    <li>Johyun</li>
-    <li>Sehyung</li>
+    <li *ngFor="let video of videoList">
+      <button
+        (click)="changeBackGround(video.url)"
+        (click)="getID(video.id)"
+        [class.chosen]="video.id === videoId"
+      >{{video.name}}</button>
+    </li>
   </ul>
   <label class="icon-container" for="checkbox-navbar" (click)="changeNavBar()">
     <i *ngIf="changeArrow" class="fa fa-chevron-left"></i>
